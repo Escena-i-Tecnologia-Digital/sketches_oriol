@@ -6,18 +6,18 @@ boolean slinkyMode = false;
 
 void setup()
 {
-  size(1080,1080);
+  size(1920,1080);
    background(0);
 }
 
 void draw()
 {
-  //fill(0, 5);
+  //fill(0, 10);
   //rect(0, 0, width, height);
   
   if(mousePressed){
     chaos += 0.01;
-    //slinkyMode = true;
+    //
   }else
   {
     if(chaos > 0){
@@ -45,4 +45,12 @@ void draw()
   }
    
   ellipse(x,y,x,y);
+}
+
+void keyPressed()
+{
+ if(key == 's')
+ {
+   slinkyMode = !slinkyMode;
+ }
 }
